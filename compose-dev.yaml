@@ -1,5 +1,6 @@
 services:
   abus.sh:
+    build: abus.sh
     ports:
       - "8080:80"
       - "8443:443"

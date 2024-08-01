@@ -1,6 +1,5 @@
 services:
   abus.sh:
-    build: abus.sh
     volumes:
       - type: bind
         source: ./secrets

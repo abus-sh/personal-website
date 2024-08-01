@@ -1,5 +1,6 @@
 services:
   abus.sh:
+    image: personal-website-abus.sh
     ports:
-      - "80"
-      - "443"
+      - "80:80"
+      - "443:443"
