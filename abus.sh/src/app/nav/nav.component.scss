@@ -1,0 +1,51 @@
+@import "../../variables.scss";
+
+nav {
+    width: 100%;
+    padding: 0.5em 0.25em;
+    background-color: $header-bg-color;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+a {
+    display: block;
+    line-height: 44px;
+    text-decoration: none;
+}
+
+.site {
+    a {
+        padding: 0.25em 1em;
+        font-size: 1.25em;
+        color: $header-txt-color;
+        font-weight: bold;
+    }
+
+    .title {
+        font-size: 2em;
+        padding: 0.25em 0.5em;
+    }
+}
+
+.social {
+    padding-right: 1em;
+
+    a {
+        display: block;
+        padding: 0.25em 0.25em;
+        line-height: 44px;
+    }
+}

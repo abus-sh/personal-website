@@ -1,0 +1,9 @@
+<div>
+    <h2 *ngIf="projectLink == ''">
+        {{projectName}}
+    </h2>
+    <h2 *ngIf="projectLink != ''">
+        <a href="{{projectLink}}">{{projectName}}</a>
+    </h2>
+    <ng-content></ng-content>
+</div>
