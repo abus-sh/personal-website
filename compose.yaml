@@ -2,9 +2,9 @@ services:
   abus.sh:
     build: abus.sh
     volumes:
-      - type: bind
-        source: ./abus.sh/dist/abus.sh/browser
-        target: /data/abus.sh
+      #- type: bind
+      #  source: ./abus.sh/dist/abus.sh/browser
+      #  target: /data/abus.sh
       - type: bind
         source: ./secrets
         target: /data/secrets
@@ -14,5 +14,4 @@ services:
       - type: bind
         source: ./config/nginx/conf.d
         target: /etc/nginx/conf.d
-    environment:
-      EDITOR: vim
+    restart: unless-stopped
