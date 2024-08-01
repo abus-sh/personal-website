@@ -14,15 +14,12 @@ COPY "./package-lock.json" "."
 COPY "./tsconfig.app.json" "."
 COPY "./tsconfig.spec.json" "."
 COPY "./angular.json" "."
-#COPY "./public" "./public"
 
 RUN ["npm", "install", "--save-prod"]
 
 RUN --mount=type=bind,source="./src",target="/data/src" \
     --mount=type=bind,source="./public",target="/data/public" \
     ["ng", "build"]
-
-#CMD ["tail", "-f", "/dev/null"]
 
 FROM nginx:1.27
 
